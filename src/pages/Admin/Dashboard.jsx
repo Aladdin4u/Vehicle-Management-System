@@ -6,6 +6,9 @@ import {
     useParams,
     Outlet,
   } from "react-router-dom";
+  import { FaUsers, FaSearch, FaCar } from 'react-icons/fa'
+  import { MdDashboard } from 'react-icons/md'
+  import { TbReport, TbLayoutDashboard } from 'react-icons/tb'
 
 const AdminDashboard = () => {
 
@@ -15,80 +18,87 @@ const AdminDashboard = () => {
         display: "block",
         backgroundColor: "green",
         color: "white",
-        padding: "5px",
+        padding: "15px",
     }
 
     return ( 
         <div className="flex w-full">
             
-            <div className="w-[25%] bg-white p-4">
+            <div className="w-[25%] bg-white h-screen">
                 <div className="flex justify-between items-center mb-8 p-4 border-b-2">
                     <img src="/" alt="img" className="w-14 h-14 rounded-full bg-red-300" />
                     <strong>Welcome Admin</strong>
                 </div>
-                <ul>
-                    <li>
+                <ul className="py-2">
+                    <li className="mb-4" >
                         <NavLink 
                             to="."
+                            className="px-4 py-2"
                             style={({isActive}) => isActive ? styles : null}
                             end
                         >
-                            Dashboard
+                          <TbLayoutDashboard style={{display: "inline"}} /> Dashboard
                         </NavLink>
                     </li>
-                    <li>
+                    <li className="mb-4">
                         <NavLink 
                             to="category"
+                            className="px-4 py-2"
                             style={({isActive}) => isActive ? styles : null}
                         >
-                            Vechicle Category
+                           <MdDashboard style={{display: "inline"}} /> Vechicle Category
                         </NavLink>
                     </li>
-                    <li>
+                    <li className="mb-4">
                         <NavLink 
                             to="addvehicle"
+                            className="px-4 py-2"
                             style={({isActive}) => isActive ? styles : null}
                         >
-                            Add Vechicle
+                           <FaCar style={{display: "inline"}} /> Add Vechicle
                         </NavLink>
                     </li>
-                    <li>
+                    <li className="mb-4">
                         <NavLink 
                             to="managevehicle"
+                            className="px-4 py-2"
                             style={({isActive}) => isActive ? styles : null}
                         >
-                            Manage Vechicle
+                           <FaCar style={{display: "inline"}} /> Manage Vechicle
                         </NavLink>
                     </li>
-                    <li>
+                    <li className="mb-4">
                         <NavLink 
                             to="reports"
+                            className="px-4 py-2"
                             style={({isActive}) => isActive ? styles : null}
                         >
-                            Reports
+                           <TbReport style={{display: "inline"}} /> Reports
                         </NavLink>
                     </li>
-                    <li>
+                    <li className="mb-4">
                         <NavLink 
                             to="search"
+                            className="px-4 py-2"
                             style={({isActive}) => isActive ? styles : null}
                         >
-                            Search Vehicle
+                            <FaSearch style={{display: "inline"}} /> Search Vehicle
                         </NavLink>
                     </li>
-                    <li>
+                    <li className="mb-4">
                         <NavLink 
                             to="regusers"
+                            className="px-4 py-2"
                             style={({isActive}) => isActive ? styles : null}
                         >
-                            Reg Users
+                            <FaUsers style={{display: "inline"}} /> Reg Users
                         </NavLink>
                     </li>
                 </ul>
             </div>
             <div className="w-[75%] bg-gray-300 p-4">
                 <div className="flex justify-between items-center mb-4">
-                    <h2>My Dashboard</h2>
+                    <h2 className="uppercase mb-2 font-bold text-white">My Dashboard</h2>
                     <div className="px-4 py-2 overflow">
                         <input 
                             type="search"

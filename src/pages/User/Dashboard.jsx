@@ -2,8 +2,8 @@ import React from "react";
 
 const UserDashboard = () => {
     return ( 
-        <div>
-            this is user UserDashboard
+        <div className="bg-white shadow">
+            Welcome to user panel!!
         </div>
      );
 }

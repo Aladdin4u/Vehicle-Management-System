@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Register from "./pages/Register";
 import AdminForm from "./pages/AdminForm";
 import UserForm from "./pages/UserForm";
 import AdminDashboard from "./pages/Admin/Dashboard";
@@ -10,12 +11,14 @@ import ManageVechicle from "./pages/Admin/ManageVechicle";
 import SearchVechicle from "./pages/Admin/SearchVechicle";
 import RegUsers from "./pages/Admin/RegUsers";
 import Reports from "./pages/Admin/Reports";
-import UserDashboard from "./pages/UserDashboard";
 import VechicleList from "./pages/Admin/VehicleList";
+import UserDashboard from "./pages/User/Dashboard";
+import Vehicle from "./pages/User/Vechicle";
+import Layout from "./components/Layout";
+import UserLayout from "./components/UserLayout";
+import AdminLayout from "./components/AdminLayout";
 import "./index.css";
 import "./style.css";
-import Layout from "./components/Layout";
-import AdminLayout from "./components/AdminLayout";
 
 const App = () => {
   return (
@@ -24,6 +27,8 @@ const App = () => {
           <Route path="/" element={<Layout />} >
             <Route index element={<Home/>} />
             <Route path="/adminlogin" element={<AdminForm />} />
+            <Route path="/userlogin" element={<UserForm />} />
+            <Route path="/create" element={<Register />} />
 
             <Route path="/admin" element={<AdminDashboard />}>
               <Route index element={<VechicleList />} />
@@ -34,8 +39,10 @@ const App = () => {
               <Route path="search" element={<SearchVechicle />} />
               <Route path="regusers" element={<RegUsers />} />
             </Route>
-            <Route path="/userlogin" element={<UserForm />} />
-            <Route path="/userdashboard" element={<UserDashboard />} />
+            <Route path="/user" element={<UserLayout />}>
+              <Route index element={<UserDashboard/>} />
+              <Route path="view" element={<Vehicle/>} />
+            </Route>
           </Route>
         </Routes>
     </BrowserRouter>

@@ -5,11 +5,13 @@ import Footer from './Footer';
 
 const Layout = () => {
     return ( 
-        <>
-        <Navbar />
-        <Outlet />
-        <Footer />
-        </>
+        <div className='w-full h-screen'>
+            <Navbar />
+            <main className=''>
+                <Outlet />
+            </main>
+            <Footer />
+        </div>
      );
 }
  
