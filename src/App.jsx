@@ -16,7 +16,6 @@ import UserDashboard from "./pages/User/Dashboard";
 import Vehicle from "./pages/User/Vechicle";
 import Layout from "./components/Layout";
 import UserLayout from "./components/UserLayout";
-import AdminLayout from "./components/AdminLayout";
 import "./index.css";
 import "./style.css";
 

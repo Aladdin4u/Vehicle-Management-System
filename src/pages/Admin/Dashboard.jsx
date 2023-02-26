@@ -1,19 +1,13 @@
 import React from "react";
 import {
     NavLink,
-    Routes,
-    Route,
-    useParams,
     Outlet,
   } from "react-router-dom";
-  import { FaUsers, FaSearch, FaCar } from 'react-icons/fa'
+  import { FaUsers, FaSearch, FaCar, FaUserCircle } from 'react-icons/fa'
   import { MdDashboard } from 'react-icons/md'
   import { TbReport, TbLayoutDashboard } from 'react-icons/tb'
 
 const AdminDashboard = () => {
-
-    // const params = useParams();
-    // const match = useMatch();
     const styles = {
         display: "block",
         backgroundColor: "green",
@@ -22,11 +16,12 @@ const AdminDashboard = () => {
     }
 
     return ( 
-        <div className="flex w-full">
+        <div className="flex w-full min-h-screen bg-gray-300">
             
-            <div className="w-[25%] bg-white h-screen">
+            <div className="w-[25%] bg-white">
                 <div className="flex justify-between items-center mb-8 p-4 border-b-2">
-                    <img src="/" alt="img" className="w-14 h-14 rounded-full bg-red-300" />
+                    <FaUserCircle size={18} />
+                    {/* <img src="/" alt="img" className="w-14 h-14 rounded-full bg-red-300" /> */}
                     <strong>Welcome Admin</strong>
                 </div>
                 <ul className="py-2">
@@ -96,9 +91,9 @@ const AdminDashboard = () => {
                     </li>
                 </ul>
             </div>
-            <div className="w-[75%] bg-gray-300 p-4">
+            <div className="w-[75%] p-4">
                 <div className="flex justify-between items-center mb-4">
-                    <h2 className="uppercase mb-2 font-bold text-white">My Dashboard</h2>
+                    <h2 className="uppercase mb-2 font-bold text-white">Dashboard</h2>
                     <div className="px-4 py-2 overflow">
                         <input 
                             type="search"

@@ -5,7 +5,7 @@ const Footer = () => {
   const year = d.getFullYear();
 
   return (
-    <div className="py-[64px] bg-green-600 flex flex-col justify-center items-center py-4 px-6">
+    <div className="py-[64px] bg-green-600 flex flex-col justify-center items-center py-4 px-6 mt-auto">
       <p className="text-white font-sm">
         &copy; Powered by Fusion Five{" "}
         <span className="font-medium">{year}</span>
