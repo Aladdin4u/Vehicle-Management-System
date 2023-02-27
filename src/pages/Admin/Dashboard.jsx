@@ -21,7 +21,6 @@ const AdminDashboard = () => {
             <div className="w-[25%] bg-white">
                 <div className="flex justify-between items-center mb-8 p-4 border-b-2">
                     <FaUserCircle size={18} />
-                    {/* <img src="/" alt="img" className="w-14 h-14 rounded-full bg-red-300" /> */}
                     <strong>Welcome Admin</strong>
                 </div>
                 <ul className="py-2">
