@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Button from './Button';
+import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Login = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     
@@ -32,10 +32,11 @@ const Login = () => {
                         onChange={((e) => setPassword(e.target.value))}
                     />
                     <p className="text-red-500 text-xs italic">Please choose a password</p>
+                    <Link to={props.linkfg} className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">Forgot Password?</Link>
                 </div>
                 <div className="flex items-center justify-between">
-                <Button text="Sign In" />
-                    <a href='#' className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">Forgot Password?</a>
+                    <Link to={props.link} className="inline-block align-baseline font-bold text-sm text-white px-3 py-2 rounded bg-blue-500 hover:bg-blue-800">Log in</Link>
+                    <Link to={props.linkcreate} className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">Create an account</Link>
                 </div>
             </form>
         </div>

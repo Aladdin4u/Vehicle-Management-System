@@ -1,10 +1,19 @@
 import React from "react";
 
-const Button = ({text}) => {
+const Button = (props) => {
+  const { children, outline, className, ...rest } = props;
 
+  // const classNames = clsx(
+  //   {
+  //     btn: true,
+  //     "btn-default": !outline,
+  //     "btn-outline": outline,
+  //   },
+  //   className
+  // );
   return (
-    <button type="button" className="px-4 py-2 bg-green-500 text-white hover:bg-green-800 rounded focus:outline-none focus:shadow-outline">
-        {text}
+    <button className={className} {...rest}>
+      {children}
     </button>
   );
 };

@@ -9,8 +9,8 @@ const Navbar = () => {
           <div className="flex flex-1 p-4 items-center justify-between">
             <h1 className="font-bold uppercase text-white">Vehicle Management System</h1>
           <div className=" space-x-2 sm:space-x-4">
-            <Link to="/adminlogin" className="bg-green-500 hover:bg-green-700 text-white rounded px-4 py-2">Admin</Link>
-            <Link to="/userlogin"className="bg-green-500 hover:bg-green-700 text-white rounded px-4 py-2">User</Link>
+            <Link to="/adminlogin" className="bg-green-500 hover:bg-green-700 text-white rounded px-3 py-2">Admin</Link>
+            <Link to="/userlogin"className="bg-green-500 hover:bg-green-700 text-white rounded px-3 py-2">User</Link>
           </div>
         </div>
         </div>

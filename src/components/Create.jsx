@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, redirect } from 'react-router-dom';
 import Button from './Button';
 
 const Create = () => {
@@ -34,7 +35,7 @@ const Create = () => {
     
     return ( 
         <div className="w-full max-w-2xl">
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+            <form className="bg-white shadow rounded px-4 py-3" onSubmit={handleSubmit}>
                 <div className="mb-4">
                     <label htmlFor="username" className="block text-grey-700 text-sm font-bold mb-2">Username</label>
                     <input
@@ -96,9 +97,9 @@ const Create = () => {
                     />
                 </div>
                 <div className="flex items-center justify-between">
-                    <button>Register</button>
-                    {/* <Button type="submit" text="Register" /> */}
-                    <a href='/userlogin' className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">Login</a>
+                    <button className="align-baseline font-bold text-sm text-white px-3 py-2 rounded bg-blue-500 hover:bg-blue-800">Sign up</button>
+                    {/* <Button ></Button> */}
+                    <Link to="/userlogin" className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">Log in</Link>
                 </div>
             </form>
         </div>
