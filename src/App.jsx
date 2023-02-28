@@ -22,28 +22,28 @@ import "./style.css";
 const App = () => {
   return (
     <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />} >
-            <Route index element={<Home/>} />
-            <Route path="/adminlogin" element={<AdminForm />} />
-            <Route path="/userlogin" element={<UserForm />} />
-            <Route path="/create" element={<Register />} />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/adminlogin" element={<AdminForm />} />
+          <Route path="/userlogin" element={<UserForm />} />
+          <Route path="/create" element={<Register />} />
 
-            <Route path="/admin" element={<AdminDashboard />}>
-              <Route index element={<VechicleList />} />
-              <Route path="category" element={<VechicleCategory />} />
-              <Route path="addvehicle" element={<AddVehicle />} />
-              <Route path="managevehicle" element={<ManageVechicle />} />
-              <Route path="reports" element={<Reports />} />
-              <Route path="search" element={<SearchVechicle />} />
-              <Route path="regusers" element={<RegUsers />} />
-            </Route>
-            <Route path="/user" element={<UserLayout />}>
-              <Route index element={<UserDashboard/>} />
-              <Route path="view" element={<Vehicle/>} />
-            </Route>
+          <Route path="/admin" element={<AdminDashboard />}>
+            <Route index element={<VechicleList />} />
+            <Route path="category" element={<VechicleCategory />} />
+            <Route path="addvehicle" element={<AddVehicle />} />
+            <Route path="managevehicle" element={<ManageVechicle />} />
+            <Route path="reports" element={<Reports />} />
+            <Route path="search" element={<SearchVechicle />} />
+            <Route path="regusers" element={<RegUsers />} />
           </Route>
-        </Routes>
+          <Route path="/user" element={<UserLayout />}>
+            <Route index element={<UserDashboard />} />
+            <Route path="view" element={<Vehicle />} />
+          </Route>
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 };

@@ -2,22 +2,23 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Login = (props) => {
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
     return ( 
         <div className="w-full max-w-2xl">
             <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">
-                    <label htmlFor="username" className="block text-grey-700 text-sm font-bold mb-2">Username</label>
+                    <label htmlFor="email" className="block text-grey-700 text-sm font-bold mb-2">Email</label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        type="text"
-                        id="username"
-                        name="username"
-                        placeholder="Your username"
-                        value={username}
-                        onChange={((e) => setUsername(e.target.value) )}
+                        type="email"
+                        id="email"
+                        name="email"
+                        required="required"
+                        placeholder="Your email"
+                        value={email}
+                        onChange={((e) => setEmail(e.target.value) )}
                     />
                 </div>
                 <div className="mb-6">
@@ -27,6 +28,7 @@ const Login = (props) => {
                         type="password"
                         id="password"
                         name="password"
+                        required="required"
                         placeholder="Your password"
                         value={password}
                         onChange={((e) => setPassword(e.target.value))}

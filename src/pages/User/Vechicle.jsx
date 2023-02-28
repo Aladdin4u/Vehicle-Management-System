@@ -6,7 +6,7 @@ const Vehicle = () => {
         <div className="bg-white rounded-lg shadow-md">
             <h1 className="block w-full bg-gray-100 px-3 py-2 shadow mb-2 font-bold">Vehicle Parking Details</h1>
             <div className="px-3 py-2">
-            <table className="border-collapse table-auto w-full">
+            <table className="text-sm text-left md:text-md border-collapse table-auto w-full">
                     <thead>
                         <tr>
                             <th className="py-3 bg-green-500 text-white">S/N</th>

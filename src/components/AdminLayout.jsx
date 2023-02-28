@@ -1,12 +1,12 @@
-import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
 
 const AdminLayout = () => {
-    return ( 
-        <>
-            <Outlet />
-        </>
-     );
-}
- 
+  return (
+    <>
+      <Outlet />
+    </>
+  );
+};
+
 export default AdminLayout;
