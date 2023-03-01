@@ -43,29 +43,27 @@ const UserDashboard = () => {
           </li>
           <li className="mb-4">
             <NavLink
-              to="view"
+              to="pickup"
               className="px-4 py-2"
               style={({ isActive }) => (isActive ? styles : null)}
             >
-              <MdDashboard style={{ display: "inline" }} /> View Vechicle
+              <MdDashboard style={{ display: "inline" }} /> Pick Up
             </NavLink>
           </li>
           <li className="mb-4">
             <NavLink
-              to="booking"
+              to="status"
               className="px-4 py-2"
               style={({ isActive }) => (isActive ? styles : null)}
             >
-              <MdDashboard style={{ display: "inline" }} /> Booking
+              <MdDashboard style={{ display: "inline" }} /> Status
             </NavLink>
           </li>
         </ul>
       </div>
       <div className="w-full md:w-[75%]">
         <div className="flex justify-between items-center mb-4 bg-green-500 h-[58px]">
-          <h2 className="ml-4 uppercase font-bold text-white">
-            Dashboard
-          </h2>
+          <h2 className="ml-4 uppercase font-bold text-white">Dashboard</h2>
           <div className="flex flex-end relative px-4 py-2 md:hidden">
             <button className="px-4 py-2 text-white" onClick={handleMenu}>
               <HiMenu size="24" />
@@ -94,11 +92,20 @@ const UserDashboard = () => {
                 </li>
                 <li className="mb-4">
                   <NavLink
-                    to="view"
+                    to="pickup"
                     className="px-4 py-2"
                     style={({ isActive }) => (isActive ? styles : null)}
                   >
-                    <MdDashboard style={{ display: "inline" }} /> View Vechicle
+                    <MdDashboard style={{ display: "inline" }} /> Pick Up
+                  </NavLink>
+                </li>
+                <li className="mb-4">
+                  <NavLink
+                    to="status"
+                    className="px-4 py-2"
+                    style={({ isActive }) => (isActive ? styles : null)}
+                  >
+                    <MdDashboard style={{ display: "inline" }} /> Status
                   </NavLink>
                 </li>
               </ul>

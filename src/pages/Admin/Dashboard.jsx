@@ -99,13 +99,20 @@ const AdminDashboard = () => {
               <FaUsers style={{ display: "inline" }} /> Reg Users
             </NavLink>
           </li>
+          <li className="mb-4">
+            <NavLink
+              to="rides"
+              className="px-4 py-2"
+              style={({ isActive }) => (isActive ? styles : null)}
+            >
+              <FaUsers style={{ display: "inline" }} /> Rides Management
+            </NavLink>
+          </li>
         </ul>
       </div>
       <div className="w-full md:w-[75%]">
-        <div className="flex justify-between items-center mb-4 bg-green-500">
-          <h2 className="uppercase ml-4 mb-2 font-bold text-white">
-            Dashboard
-          </h2>
+        <div className="flex justify-between items-center mb-4 bg-green-500 h-[58px]">
+          <h2 className="uppercase ml-4 font-bold text-white">Dashboard</h2>
           <div className="flex flex-end relative px-4 py-2 md:hidden">
             <button className="px-4 py-2 text-white" onClick={handleMenu}>
               <HiMenu size="24" />
@@ -185,6 +192,15 @@ const AdminDashboard = () => {
                     style={({ isActive }) => (isActive ? styles : null)}
                   >
                     <FaUsers style={{ display: "inline" }} /> Reg Users
+                  </NavLink>
+                </li>
+                <li className="mb-4">
+                  <NavLink
+                    to="rides"
+                    className="px-4 py-2"
+                    style={({ isActive }) => (isActive ? styles : null)}
+                  >
+                    <FaUsers style={{ display: "inline" }} /> Rides Management
                   </NavLink>
                 </li>
               </ul>

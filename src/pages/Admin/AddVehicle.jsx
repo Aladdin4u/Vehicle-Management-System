@@ -53,10 +53,9 @@ const AddVehicle = () => {
                   className="w-full shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 >
                   <option value="">-- select type --</option>
-                  <option value="Bus">Bus</option>
-                  <option value="rickshaw">Rickshaw</option>
-                  <option value="truck">Truck</option>
-                  <option value="car">Car</option>
+                  <option value="fourWheeler">Four Wheeler Vehicle</option>
+                  <option value="twoWheeler">Four Wheeler Vehicle</option>
+                  <option value="bicycles">Bicycles</option>
                 </select>
               </div>
             </div>
