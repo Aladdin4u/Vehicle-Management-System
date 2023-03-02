@@ -7,6 +7,7 @@ const Create = () => {
     firstname: "",
     lastname: "",
     email: "",
+    type: "",
     password: "",
     confirmPassword: "",
   });
@@ -92,6 +93,26 @@ const Create = () => {
             value={formData.email}
             onChange={handleChange}
           />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="email"
+            className="block text-grey-700 text-sm font-bold mb-2"
+          >
+            User Type
+          </label>
+          <select
+            id="type"
+            name="type"
+            required="required"
+            value={formData.type}
+            onChange={handleChange}
+            className="w-full shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          >
+            <option value="">-- select user --</option>
+            <option value="driver">Driver</option>
+            <option value="passenger">Passenger</option>
+          </select>
         </div>
         <div className="mb-6">
           <label

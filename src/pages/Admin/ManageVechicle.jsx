@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 import Button from "../../components/Button";
 
 const ManageVehicle = () => {
@@ -30,7 +30,7 @@ const ManageVehicle = () => {
               <td className="py-3">DEl-55576</td>
               <td className="py-3 space-x-2">
               <Button className="font-bold text-sm text-white px-3 py-2 rounded bg-green-500 hover:bg-green-800">
-                <Link to="/admin/incoming">
+                <Link to="incoming">
                   View
                 </Link>
               </Button>
@@ -44,6 +44,9 @@ const ManageVehicle = () => {
             </tr>
           </tbody>
         </table>
+      </div>
+      <div>
+        <Outlet />
       </div>
     </div>
   );

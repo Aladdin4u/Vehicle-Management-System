@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { FaUserCircle, FaTimes } from "react-icons/fa";
-import { MdDashboard } from "react-icons/md";
+import { FaUserCircle, FaCar, FaTimes } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
 import { TbLayoutDashboard } from "react-icons/tb";
 
@@ -47,7 +46,7 @@ const UserDashboard = () => {
               className="px-4 py-2"
               style={({ isActive }) => (isActive ? styles : null)}
             >
-              <MdDashboard style={{ display: "inline" }} /> Pick Up
+              <FaCar style={{ display: "inline" }} /> Pick Up
             </NavLink>
           </li>
           <li className="mb-4">
@@ -56,7 +55,7 @@ const UserDashboard = () => {
               className="px-4 py-2"
               style={({ isActive }) => (isActive ? styles : null)}
             >
-              <MdDashboard style={{ display: "inline" }} /> Status
+              <FaCar style={{ display: "inline" }} /> Status
             </NavLink>
           </li>
         </ul>
@@ -96,7 +95,7 @@ const UserDashboard = () => {
                     className="px-4 py-2"
                     style={({ isActive }) => (isActive ? styles : null)}
                   >
-                    <MdDashboard style={{ display: "inline" }} /> Pick Up
+                    <FaCar style={{ display: "inline" }} /> Pick Up
                   </NavLink>
                 </li>
                 <li className="mb-4">
@@ -105,7 +104,7 @@ const UserDashboard = () => {
                     className="px-4 py-2"
                     style={({ isActive }) => (isActive ? styles : null)}
                   >
-                    <MdDashboard style={{ display: "inline" }} /> Status
+                    <FaCar style={{ display: "inline" }} /> Status
                   </NavLink>
                 </li>
               </ul>

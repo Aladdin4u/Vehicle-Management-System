@@ -1,34 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import AdminForm from "./pages/AdminForm";
-import UserForm from "./pages/User/UserForm";
-import AdminDashboard from "./pages/Admin/Dashboard";
+import UserForm from "./pages/UserForm";
 import VechicleCategory from "./pages/Admin/VechicleCategory";
 import AddVehicle from "./pages/Admin/AddVehicle";
 import ManageVechicle from "./pages/Admin/ManageVechicle";
 import SearchVechicle from "./pages/Admin/SearchVechicle";
 import RegUsers from "./pages/Admin/RegUsers";
 import Reports from "./pages/Admin/Reports";
-import VechicleList from "./pages/Admin/VehicleList";
+import VechicleList from "./pages/Admin/Dashboard";
 import Incoming from "./pages/Admin/Incoming";
 import UserDashboard from "./pages/User/Dashboard";
 import Vehicle from "./pages/User/Vechicle";
 import Booking from "./pages/User/Booking";
+import DriverDashboard from "./pages/Driver/Dashboard";
 import PickUp from "./pages/Driver/PickUp";
+import Status from "./pages/Driver/Status";
 import Rides from "./pages/Admin/Rides";
 import Passenger from "./pages/Admin/Passenger";
 import Driver from "./pages/Admin/Driver";
 import Layout from "./components/Layout";
+import AdminLayout from "./components/AdminLayout";
 import UserLayout from "./components/UserLayout";
 import DriverLayout from "./components/DriverLayout";
 import "./index.css";
 import "./style.css";
-import DriverDashboard from "./pages/Driver/Dashboard";
-import Create from "./pages/Driver/Create";
-import Login from "./pages/Driver/Login";
-import Status from "./pages/Driver/Status";
 
 const App = () => {
   return (
@@ -40,15 +38,16 @@ const App = () => {
           <Route path="/userlogin" element={<UserForm />} />
           <Route path="/create" element={<Register />} />
 
-          <Route path="/admin" element={<AdminDashboard />}>
+          <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<VechicleList />} />
             <Route path="category" element={<VechicleCategory />} />
             <Route path="addvehicle" element={<AddVehicle />} />
-            <Route path="managevehicle" element={<ManageVechicle />} />
+            <Route path="managevehicle" element={<ManageVechicle />}>
+              <Route path="incoming" element={<Incoming />} />
+            </Route>
             <Route path="reports" element={<Reports />} />
             <Route path="search" element={<SearchVechicle />} />
             <Route path="regusers" element={<RegUsers />} />
-            <Route path="incoming" element={<Incoming />} />
             <Route path="rides" element={<Rides />}>
               <Route index element={<Driver />} />
               <Route path="passenger" element={<Passenger />} />
@@ -61,8 +60,6 @@ const App = () => {
           </Route>
           <Route path="/driver" element={<DriverLayout />}>
             <Route index element={<DriverDashboard />} />
-            <Route path="create" element={<Create />} />
-            <Route path="login" element={<Login />} />
             <Route path="status" element={<Status />} />
             <Route path="pickup" element={<PickUp />} />
           </Route>
